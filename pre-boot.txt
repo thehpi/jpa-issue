@@ -1,0 +1,5 @@
+delete-jdbc-resource jdbc/dbTestDatabase
+delete-jdbc-connection-pool dbTestDatabase
+create-jdbc-connection-pool --datasourceclassname org.postgresql.xa.PGXADataSource --restype javax.sql.XADataSource --property user=postgres:password=postgres:databaseName=postgres:serverName=mydb:portNumber=5432 dbTestDatabase
+create-jdbc-resource --connectionpoolid dbTestDatabase jdbc/dbTestDatabase
+
