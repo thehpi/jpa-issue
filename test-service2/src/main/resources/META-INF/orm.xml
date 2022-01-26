@@ -11,14 +11,18 @@
   <entity class="nl.hans.entities.test.Foo" name="Foo2" access="FIELD">
     <table name="my_foo_2"/>
     <attributes>
-      <id name="id2"/>
-      <basic name="id1"/>
+      <id name="id1">
+        <column name="id1_2"/>
+      </id>
+      <basic name="id2">
+        <column name="id2_2"/>
+      </basic>
       <basic name="test1">
-        <column name="test_1"/>
+        <column name="test1_2"/>
         <convert converter="nl.hans.converter.TestConverter"/>
       </basic>
       <basic name="test2">
-        <column name="test_2"/>
+        <column name="test2_2"/>
       </basic>
       <embedded name="bar"/>
     </attributes>
@@ -26,10 +30,10 @@
   <embeddable class="nl.hans.entities.test.Bar" access="FIELD">
     <attributes>
       <basic name="bartest1">
-        <column name="bar_test_1"/>
+        <column name="bartest1_2"/>
       </basic>
       <basic name="bartest2">
-        <column name="bar_test_2"/>
+        <column name="bartest2_2"/>
       </basic>
     </attributes>
   </embeddable>
